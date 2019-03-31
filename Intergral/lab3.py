@@ -31,12 +31,11 @@ if __name__ == '__main__':
     r = 5*(sin(1)+4*sin(7/2)+sin(6))/6
     er = (expect-r)/r
 
-    for i in range(1, 13):
+    for i in range(0, 13):
         n = pow(2, i)
         res = trapez(sin, 1, 6, n)
         e = (expect - res)/res
-        d = - log(e/er)/log(n)
-        print("n = {}, {:.12e}\n {:.12e}\n {:.12e}\n".format(n, res, e, d)) 
+        print("n = {}, {:.12e}\n {:.12e}\n".format(n, res, e)) 
 
     print()
 
